@@ -3,12 +3,9 @@ import re
 import json
 import base64
 import asyncio
-import logging
 from helper import get_size
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
-
-logger = logging.getLogger(__name__)
 
 BATCH_FILES = {}
 
