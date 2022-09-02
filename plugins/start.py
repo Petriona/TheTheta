@@ -30,8 +30,7 @@ async def start(client, message):
                 with open(file) as file_data:
                     msgs=json.loads(file_data.read())
             except:
-                await sts.edit("FAILED")
-                return await client.send_message(LOG_CHANNEL, "UNABLE TO OPEN FILE.")
+                await sts.edit("FAILED.")
             os.remove(file)
             BATCH_FILES[file_id] = msgs
         for msg in msgs:
