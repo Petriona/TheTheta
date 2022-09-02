@@ -75,7 +75,6 @@ class Bot(Client):
 
 
 async def hemlo():
-    app = Bot()
-    await app.run()
+    await Bot().run()
 
 asyncio.run(hemlo())
