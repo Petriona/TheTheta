@@ -1,3 +1,4 @@
+import asyncio
 from os import environ
 from pyrogram import types
 from pyrogram.raw.all import layer
@@ -26,12 +27,12 @@ class Bot(Client):
         await super().start()
         me = await self.get_me()
         self.username = '@' + me.username
-        logging.info(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
-        logging.info("Bot Started")
+        print(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
+        print("Bot Started successfully.")
 
     async def stop(self, *args):
         await super().stop()
-        logging.info("Bot stopped. Bye.")
+        print("Bot stopped. Bye.")
     
     async def iter_messages(
         self,
@@ -73,5 +74,8 @@ class Bot(Client):
                 current += 1
 
 
-app = Bot()
-app.run()
+async def hemlo():
+    app = Bot()
+    await app.run()
+
+asyncio.run(hemlo())
