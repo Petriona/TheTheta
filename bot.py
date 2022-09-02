@@ -5,6 +5,7 @@ from pyrogram import Client, __version__
 from typing import Union, Optional, AsyncGenerator
 
 API_HASH = environ.get('API_HASH')
+BOT_TOKEN = environ.get('BOT_TOKEN')
 API_ID = int(environ.get('API_ID'))
 ADMINS = environ.get('ADMINS').split(',')
 
