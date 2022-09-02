@@ -73,8 +73,4 @@ class Bot(Client):
                 yield message
                 current += 1
 
-
-async def hemlo():
-    await Bot().run()
-
 asyncio.run(hemlo())
