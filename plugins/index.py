@@ -2,16 +2,12 @@ import re
 import os
 import json
 import base64
-import logging
 from bot import ADMINS
 from pyrogram import filters, Client
 from helper import unpack_new_file_id
 from pyrogram.errors.exceptions.bad_request_400 import ChannelInvalid
 from pyrogram.errors.exceptions.bad_request_400 import UsernameInvalid
 from pyrogram.errors.exceptions.bad_request_400 import UsernameNotModified
-
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
 
 async def allowed(_, __, message):
     if PUBLIC_FILE_STORE:
