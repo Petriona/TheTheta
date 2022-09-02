@@ -1,15 +1,11 @@
-import logging
-import logging.config
-
-# Get logging configurations
-logging.config.fileConfig('logging.conf')
-logging.getLogger().setLevel(logging.INFO)
-logging.getLogger("pyrogram").setLevel(logging.ERROR)
-logging.getLogger("imdbpy").setLevel(logging.ERROR)
-
-from pyrogram import Client, __version__
-from pyrogram.raw.all import layer
 from pyrogram import types
+from pyrogram.raw.all import layer
+from pyrogram import Client, __version__
+from typing import Union, Optional, AsyncGenerator
+
+API_HASH = environ.get('API_HASH')
+API_ID = int(environ.get('API_ID'))
+ADMINS = environ.get('ADMINS').split(',')
 
 class Bot(Client):
 
