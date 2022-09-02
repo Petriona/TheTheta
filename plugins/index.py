@@ -3,7 +3,7 @@ import os
 import json
 import base64
 import logging
-from info import ADMINS
+from bot import ADMINS
 from pyrogram import filters, Client
 from helper import unpack_new_file_id
 from pyrogram.errors.exceptions.bad_request_400 import ChannelInvalid
